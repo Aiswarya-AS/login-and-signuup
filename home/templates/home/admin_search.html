@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+<div class="mt-5">
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>SL No.</td>
+            <td>Id</td>
+            <td>Username</td>
+            <td>Email</td>
+            
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for d in data %}
+      <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{ d.id }}</td>
+            <td>{{d.username}}</td>
+            <td>{{d.email}}
+        
+      </tr> 
+      {% endfor %}
+    </tbody>
+</table>
+
+</div>
+
+{% endblock %}

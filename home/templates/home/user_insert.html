@@ -1,0 +1,43 @@
+
+{% extends 'home/base.html' %}
+
+
+{% block content %}
+<div class="container justify-content-center mt-5"style="width:fit-content">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h2 class="text-center">Manage User</h2>
+        <div class="form-group">
+            <label for="exampleInputName">UserName</label>
+            
+            {{form.username}}
+        
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName">Email</label>
+            
+            {{form.email}}
+        
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            
+            {{form.password1}}
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            
+            {{form.password2}}
+        </div>
+
+    
+        <button type="submit" class="btn btn-primary ml-5">Submit</button> 
+        
+    </form>
+    <!-- {{form.errors}} -->
+</div>
+
+{% endblock %}
+
+
